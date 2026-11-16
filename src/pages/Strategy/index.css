@@ -1,0 +1,252 @@
+#wx-excel-page{
+    padding: 10px;
+    max-width: 1150px;
+    margin: auto;
+    height: 100%;
+}
+/* 筛选列表 */
+.filter-container{
+    margin-bottom: 10px;
+}
+.filter-list{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 5px 10px;
+    overflow: auto;
+}
+.filter-one{
+    margin: 0 5px 5px;
+}
+.filter-one:hover{
+    background-color: aquamarine!important;
+}
+.filter-one-select{
+    background-color: aquamarine;
+}
+
+.filter-select{
+    width: 50%;
+    margin-bottom: 5px;
+}
+/* 干员展示 */
+.strategy-show{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+}
+
+.strategy-hide{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.strategy-right.mobile{
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.strategy-right.mobile > .strategy-hide{
+    background-color: rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.strategy-right.mobile > .selct-one-detail {
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.strategy-left, .strategy-right{
+    width: 100%;
+    height: 500px;
+}
+
+/* 干员展示 */
+.strategy-main{
+    background-color: #120f11;
+    overflow: auto;
+    height: 500px;
+}
+.strategy-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: #120f11;
+    border-radius: 5px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap:0px;
+}
+.strategy-one{
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.strategy-type{
+    padding: 20px 0 10px;
+    color: white;
+    text-align: center;
+}
+.strategy-detail{
+    height: 100%;
+}
+.strategy-detail h2{
+    position: relative;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.strategy-detail-title{
+    white-space: nowrap;
+}
+.strategy-detail-life, .strategy-detail-cost{
+    display: inline-block;
+    width: auto;
+    font-size: 12px;
+    color: white;
+    border: 1px solid#120f11;
+    border-radius: 20px;
+    padding: 0px 10px;
+    margin-left: 5px;
+    background-color: #222;
+    line-height: 20px;
+}
+.strategy-detail-cost{
+    background-color: #17823e;
+    border-color: #17823e;
+}
+.strategy-detail-life p,
+.strategy-detail-cost p{
+    display: inline;
+    font-size: 15px;
+}
+.strategy-condition{
+    margin-top: 20px;
+}
+.strategy-one-select{
+    box-shadow: #4ADE80 0px 0px 10px 2px;
+}
+.strategy-one div{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.strategy-one.none{
+    border: 0px;
+}
+.strategy-one img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    margin-bottom: 5px;
+}
+
+/* 干员详情 */
+.selct-one-detail{
+    width: 100%;
+    padding: 20px 20px 0;
+    height: 500px;
+    border-radius: 5px;
+    border-width: 10px!important;
+    background-color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+.selectOne-img{
+    margin-top: 5vh;
+    border: 1px solid #fff;
+    margin-bottom: 20px;
+}
+
+/* 边框颜色 */
+.border-level-1 { border: 2px solid #a2a2a2; }
+.border-level-2 { border: 2px solid #F3F4F6; }
+.border-level-3 { border: 2px solid #60A5FA; }
+.border-level-4 { border: 2px solid #4ADE80; }
+.border-level-5 { border: 2px solid #FACC15; }
+.border-level-6 { border: 2px solid #FB923C; }
+
+
+/* 局部滚动条样式（给容器添加 .custom-scrollbar 类） */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
+.strategy-change{
+    text-align: left;
+    color: rgb(208, 18, 18);;
+}
+
+/* sprite图适配 */
+.strategy-show .strategy-one .sprite{
+    width: 50px;
+    height: 50px;
+}
+.strategy-show .selct-one-detail .sprite{
+    width: 50px;
+    height: 50px;
+    margin: 20px 0;
+}
+
+/* Firefox 局部适配 */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #e2e8f0 #f8fafc;
+}
+@media (max-width:769px) {
+    .strategy-show{
+        height: calc(100% - 120px);
+    }
+    .strategy-left{
+        height: 100%;
+    }
+    .strategy-list{
+        padding: 10px 3vw;
+        height: calc(100%);
+    }
+}
+@media (min-width: 768px) {
+  .strategy-left, .strategy-right{
+        width: 50%;
+        height: 500px;
+    }
+    .strategy-show{
+        display: flex;
+        background-color: white;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1200px) {
+  .strategy-left, .strategy-right{
+        width: 50%;
+        height: 500px;
+    }
+}

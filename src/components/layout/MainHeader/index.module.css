@@ -1,0 +1,19 @@
+.header{
+    padding: 0;
+    display: flex;
+}
+.left{
+    width: calc(100%-300px);
+    flex:1;
+}
+.right{
+    flex: 0 0 200px;
+    background-color: white;
+    height: 45px;
+    text-transform: right;
+    line-height: 45px;
+    text-align: right;
+}
+.right > button{
+    height: auto;
+}
